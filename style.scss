@@ -1,7 +1,6 @@
 // * { border: 1px solid red; }
 
 html {
-/*   meta name="viewport" content="width=device-width, initial-scale=1.0"; */
   // height: 100%;
   background-color: black;
 }
@@ -10,37 +9,20 @@ body {
   background-color: black;
   // height: 100%;
 }
+
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-li{
-  float: left;
-}
-#nav {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10% 50px;
-  text-decoration: none;
+  list-style-type: circle;
 }
 
-#nav:hover {
-  background-color: white;
-  color: black;
+li {
+   margin: 2%;
 }
+
 #welcome-section {
   background: black;
   color: white;
   text-align: center;
   padding: 15% 0 15% 0;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
 }
 
 .animation-wrapper{
@@ -52,7 +34,7 @@ li{
 }
 h1 {
   font-size: 45pt;
-  font-family: "Fjalla+One",sans-serif;
+  font-family: "Space Mono",sans-serif;
   margin-bottom: 1px;
 }
 
@@ -69,11 +51,10 @@ h2 {
 }
 
 h3 {
-  color: red;
+  color: yellow;
   font-size: 22pt;
   font-family: "Anonymous Pro";
   font-style: italic;
-
 }
 
 h4 {
@@ -94,7 +75,7 @@ h5 {
 p {
     font-family: 'Anonymous Pro';
     color: white;
-    font-size: 15pt;
+    font-size: 16pt;
 }
 
 #about-header {
@@ -105,10 +86,12 @@ p {
   text-decoration: underline;
   text-decoration-color: blue;
 }
+
 #about-header:hover {
   color:blue;
-  text-decoration-color: red;
+  text-decoration-color: yellow;
 }
+
 #projects {
   background-color: white;
   // margin: 1% 0;
@@ -117,10 +100,12 @@ p {
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
 }
+
 #pText {
   color: black;
   margin-top: 2%;
 }
+
 .project-tile {
   display: inline;
   width: 20%;
@@ -134,7 +119,18 @@ p {
   border-radius: 2rem;
   text-align:center;
 }
-.contact {
+
+@media screen and (max-width: 800px) {
+  .project-tile {
+    width: -webkit-fill-available;
+     height: 75px;
+  }
+   #pText {
+      margin-top: 5%;
+   }
+}
+
+#contact {
     z-index: 1;
     background-color: #0c0a09;
     position: relative;
@@ -143,13 +139,12 @@ p {
     border-bottom-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
 }
+
 .contact-links {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 980px;
     margin-top: 3%;
-    margin-left: 6.6%;
     flex-wrap: wrap;
 }
 
@@ -171,6 +166,7 @@ p {
     background-color: black;
     padding: 3%;
 }
+
 .back{
   margin-top: 1rem;
   margin-right: 1rem;
@@ -183,12 +179,23 @@ p {
   // margin-right: 3%;
   color: white;
 }
+
 .back:hover{
    font-size: 3.4rem;
 }
+
+.skills {
+   color: white;
+   list-style-type: circle;
+   font-size: 17pt;
+   font-family: 'Anonymous Pro';
+   color: #5bacf3;
+   // margin: 1%;
+}
+
 $color-bg: #1e1e1e;
 $color-particle: #fff;
-$spacing: 1400px;
+$spacing: 2560px;
 $time-1: 60s;
 $time-2: 120s;
 $time-3: 180s;
@@ -254,14 +261,14 @@ $time-4: 200s;
 .particle-4 {
   animation: animParticle $time-4 linear infinite;
   @include particles(1200);
-  height: 4.2px;
-  width: 4.2px;
+  height: 3.3px;
+  width: 3.3px;
 }
 
 .particle-4:after {
   @include particles(700);
-  height: 4.2px;
-  width: 4.2px;
+  height: 3px;
+  width: 3px;
 }
 
 @keyframes animParticle {
