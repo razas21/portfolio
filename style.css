@@ -72,6 +72,15 @@ p {
   font-size: 16pt;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+	font-size: 20;
+	font-style: italic;
+	font-family: 'Anonymous Pro';
+}
+
+
 #about-header {
   position: absolute;
   top: 0;
@@ -173,7 +182,7 @@ p {
 }
 
 .back:hover {
-  color: yellow;
+  font-size: 3.4rem;
 }
 
 .skills {
